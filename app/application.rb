@@ -10,7 +10,7 @@ class Application
       search_item=req.path.split("items/").last
       found_item=@@items.select {|item| item.name==search_item}
       binding.pry
-      if found_item
+      if found_item != []
       resp.write "The price of the #{search_item} is #{found_item[0].price}"
       resp.status = 200
       else
