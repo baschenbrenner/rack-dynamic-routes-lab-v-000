@@ -6,7 +6,9 @@ class Application
     resp = Rack::Response.new
 
     if req.path.include? ("/items/")
-      #binding.pry
+      
+      search_item=req.path.split("items/").last
+      binding.pry
     else
       resp.write "Route not found"
       resp.status = 404
