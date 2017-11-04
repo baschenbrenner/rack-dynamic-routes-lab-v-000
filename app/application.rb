@@ -9,6 +9,7 @@ class Application
     else
       resp.write "File not found"
       resp.status 404
+    end
   end
 
 
