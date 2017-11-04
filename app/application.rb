@@ -8,6 +8,8 @@ class Application
     if req.path.include? ("/items/")
 
       search_item=req.path.split("items/").last
+      @@items.select {|item| item.name==search_item}
+        
       binding.pry
     else
       resp.write "Route not found"
