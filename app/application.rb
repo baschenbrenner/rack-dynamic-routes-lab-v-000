@@ -14,7 +14,7 @@ class Application
       resp.write "The price of the #{search_item} is #{found_item[0].price}"
       resp.status = 200
       else
-      resp.write "Item not Found"
+      resp.write "Item not found"
       resp.status = 400
       end
         #binding.pry
