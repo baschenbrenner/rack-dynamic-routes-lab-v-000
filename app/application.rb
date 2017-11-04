@@ -10,11 +10,12 @@ class Application
       search_item=req.path.split("items/").last
       found_item=@@items.select {|item| item.name==search_item}
       if found_item
-      found_item[0].price
+      resp.write found_item[0].price
+      resp.status = 200
       else
       resp.write "Item not Found"
       resp.status = 400
-    end
+      end
         #binding.pry
     else
       resp.write "Route not found"
