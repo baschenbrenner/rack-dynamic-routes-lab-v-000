@@ -6,7 +6,7 @@ class Application
     resp = Rack::Response.new
 
     if req.path.include? ("/items/")
-      binding.pry
+      #binding.pry
     else
       resp.write "File not found"
       resp.status = 404
