@@ -9,7 +9,7 @@ class Application
       binding.pry
     else
       resp.write "File not found"
-      resp.status 404
+      resp.status = 404
     end
 
     resp.finish
