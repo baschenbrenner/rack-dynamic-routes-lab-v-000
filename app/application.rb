@@ -6,7 +6,7 @@ class Application
     resp = Rack::Response.new
 
     if req.path.include? ("/items/")
-      
+
       search_item=req.path.split("items/").last
       binding.pry
     else
